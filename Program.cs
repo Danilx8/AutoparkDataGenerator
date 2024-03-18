@@ -2,14 +2,11 @@
 using Autopark.Models;
 using AutoparkDataGenerator;
 using CommandLine;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Options;
 using System.ComponentModel;
 
 var contextOptions = new DbContextOptionsBuilder<ApplicationDbContext>()
-                .UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=helloappdb;Trusted_Connection=True;TrustServerCertificate=True")
+                .UseSqlServer("Server=localhost;Database=AutoparkDb;User Id=SA;Password=A!VeryComplex123Password;MultipleActiveResultSets=true")
                 .Options;
 using var _db = new ApplicationDbContext(contextOptions);
 
