@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using System.ComponentModel;
 
 var contextOptions = new DbContextOptionsBuilder<ApplicationDbContext>()
-                .UseSqlServer("Server=localhost;Database=AutoparkDb;User Id=SA;Password=A!VeryComplex123Password;MultipleActiveResultSets=true")
+                .UseSqlServer("Server=localhost;Database=AutoparkDb;User Id=SA;Password=AVeryComplex123Password;MultipleActiveResultSets=true;TrustServerCertificate=True")
                 .Options;
 using var _db = new ApplicationDbContext(contextOptions);
 
